@@ -104,6 +104,8 @@
 			border-top-width: _size(border-width);
 		}
 
+
+
 		// Modifiers.
 
 			// Size.
@@ -133,6 +135,120 @@
 
 					@include items-style1-size-reset(small, 2);
 					@include items-style1-size(small, 1, _size(gutter) * 0.75);
+
+					&.big,
+					&.medium,
+					&.small {
+						> * {
+							padding-left: 0;
+							padding-right: 0;
+						}
+
+						> :first-child {
+							padding-top: 0;
+						}
+
+						> :last-child {
+							padding-bottom: 0;
+
+							> .inner {
+								> :last-child {
+									margin-bottom: 0;
+								}
+							}
+						}
+					}
+				}
+
+	}
+
+/* Items (style4) */
+
+	@mixin items-style1-size($name, $size, $padding) {
+		&.#{$name} {
+			> * {
+				@include padding($padding, $padding);
+				width: #{100% / $size};
+
+				&:nth-child(-n + #{$size}) {
+					border-top-width: 0;
+				}
+
+				&:nth-child(#{$size}n + 1) {
+					border-left-width: 0;
+				}
+			}
+		}
+	}
+
+	@mixin items-style1-size-reset($name, $size) {
+		&.#{$name} {
+			> * {
+				&:nth-child(-n + #{$size}) {
+					border-top-width: _size(border-width);
+				}
+
+				&:nth-child(#{$size}n + 1) {
+					border-left-width: _size(border-width);
+				}
+			}
+		}
+	}
+
+	.items.style4 {
+		@include vendor('display', 'flex');
+		@include vendor('flex-wrap', 'wrap');
+		@include vendor('justify-content', 'center');
+		margin: (_size(element-margin) * 1.5) 0;
+		position: relative;
+
+		> * {
+			@include vendor('flex-grow', '0');
+			@include vendor('flex-shrink', '0');
+			border-style: none;
+			border-left-width: _size(border-width);
+			border-top-width: _size(border-width);
+		}
+
+	
+
+		// Modifiers.
+
+			// Size.
+				@include items-style1-size(big, 2, _size(gutter));
+				@include items-style1-size(big_70, 2, _size(gutter));
+				@include items-style1-size(medium, 3, _size(gutter) * 0.625);
+				@include items-style1-size(small, 4, _size(gutter) * 0.375);
+
+				@include breakpoint('<=large') {
+					@include items-style1-size-reset(small, 4);
+					@include items-style1-size(small, 3, _size(gutter) * 0.625);
+				}
+
+				@include breakpoint('<=medium') {
+					@include items-style1-size-reset(medium, 3);
+					@include items-style1-size(medium, 2, _size(gutter));
+
+					@include items-style1-size-reset(small, 3);
+					@include items-style1-size(small, 2, _size(gutter));
+				}
+
+				@include breakpoint('<=xsmall') {
+					@include items-style1-size-reset(big, 2);
+					@include items-style1-size(big, 1, _size(gutter) * 0.75);
+
+					@include items-style1-size-reset(big_70, 2);
+					@include items-style1-size(big_70, 1, _size(gutter) * 0.75);
+
+					@include items-style1-size-reset(medium, 2);
+					@include items-style1-size(medium, 1, _size(gutter) * 0.75);
+
+					@include items-style1-size-reset(small, 2);
+					@include items-style1-size(small, 1, _size(gutter) * 0.75);
+
+					&.big_70 {
+						width: 70%;
+					}
 
 					&.big,
 					&.medium,

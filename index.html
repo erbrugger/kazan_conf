@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="@AntiCacheHelper.Url("https://rdkm-dev-f1.rufond.ru/css/kazan/font-awesome.min.css")" />
 	</head>
 	<body class="is-preload">
 
@@ -14,16 +15,78 @@
 			<div id="wrapper" class="divided">
 
 				<!-- One -->
-					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+					<section class="banner style1 orient-left content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
 							<h1>Регистры доноров костного мозга: сегодня и завтра</h1>
 							<p class="major">13–14 ноября 2018 года Казань, Россия</p>
 							<ul class="actions stacked">
-								<li><a href="#first" class="button big wide smooth-scroll-middle">Зарегистрироваться</a></li>
+								<li><a href="#registration" class="button big wide smooth-scroll-middle">Зарегистрироваться</a></li>
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images/banner.jpg" alt="" />
+							<img src="images/top_picture_1.jpg" alt="Регистры доноров костного мозга: сегодня и завтра" />
+						</div>
+					</section>
+
+					<!-- Seven -->
+					<section class="wrapper style1 align-center" id="registration">
+						<div class="inner medium">
+							<h2>Форма регистрации</h2>
+							<form action="@Url.Action("Index")" method="Post">
+								<div class="fields">
+									<div class="field half">
+										<label for="@Html.NameFor(p => p.FullName)">Ф. И. О. полностью</label>
+										<input type="text" name="@Html.NameFor(p => p.FullName)" />
+									</div>
+									<div class="field half">
+										<label for="@Html.NameFor(p => p.DateOfBirth)">День рождения</label>
+										<input type="email" name="@Html.NameFor(p => p.DateOfBirth)" />
+									</div>
+									<div class="field half">
+										<label for="@Html.NameFor(p => p.GeoTitle)">Город, страна</label>
+										<input type="email" name="@Html.NameFor(p => p.GeoTitle)" />
+									</div>
+									<div class="field half">
+										<label for="@Html.NameFor(p => p.Organization)">Название организации</label>
+										<input type="email" name="@Html.NameFor(p => p.Organization)" />
+									</div>
+									<div class="field half">
+										<label for="@Html.NameFor(p => p.Position)">Должность, ученая степень</label>
+										<input type="email" name="@Html.NameFor(p => p.Position)" />
+									</div>
+									<div class="field half">
+										<label for="@Html.NameFor(p => p.Phone)">Номер телефона</label>
+										<input type="email" name="@Html.NameFor(p => p.Phone)" />
+									</div>
+									<div class="field half">
+										<label for="@Html.NameFor(p => p.Email)">Адрес электронной почты</label>
+										<input type="email" name="@Html.NameFor(p => p.Email)" />
+									</div>
+									<div class="field half">
+										<label for="@Html.NameFor(p => p.ParticipationForm)">Форма участия (спикер, слушатель)</label>
+										<select name="@Html.NameFor(p=>p.ParticipationForm)">
+                							<option value="спикер">Спикер</option>
+                							<option value="слушатель">Слушатель</option>
+            							</select>
+									</div>
+									<div class="field">
+										<label for="@Html.NameFor(p => p.Topic)">Тема доклада</label>
+										<input type="email" name="@Html.NameFor(p => p.Topic)" />
+									</div>
+									<div class="field">
+										<label for="@Html.NameFor(p => p.NgsParticipate)">Принять участие в мастер-классе по секвенированию методом NGS (да/нет)</label>
+						            <select name="@Html.NameFor(p=>p.NgsParticipate)">
+						                <option value="true">Да</option>
+						                <option value="false">Нет</option>
+						            </select>
+									</div>
+
+								</div>
+								<ul class="actions special">
+									<li><input type="submit" value="Отправить заявку" /></li>
+								</ul>
+							</form>
+
 						</div>
 					</section>
 
@@ -227,101 +290,58 @@
 					</section>
 
 				<!-- Six -->
-					<section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>Ipsum sed consequat</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
-							<div class="items style1 medium onscroll-fade-in">
-								<section>
-									<span class="icon style2 major fa-diamond"></span>
-									<h3>Lorem</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-save"></span>
-									<h3>Ipsum</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-bar-chart"></span>
-									<h3>Dolor</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-wifi"></span>
-									<h3>Amet</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-cog"></span>
-									<h3>Magna</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-paper-plane"></span>
-									<h3>Tempus</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-desktop"></span>
-									<h3>Aliquam</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-refresh"></span>
-									<h3>Elit</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-hashtag"></span>
-									<h3>Morbi</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-bolt"></span>
-									<h3>Turpis</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-envelope"></span>
-									<h3>Ultrices</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-leaf"></span>
-									<h3>Risus</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-							</div>
-						</div>
-					</section>
+                    <section class="wrapper style1 align-center">
+                        <div class="inner">
+                            <div class="items style1 big onscroll-fade-in">
+                                <section>
+                                    <a href="https://kpfu.ru/" target="_blank" class="image half_center"><img src="https://im.rusfond.ru/pics/landings/kazan/kfu_logo.svg" alt="Казанский (Приволжский) федеральный университет (КФУ)"></a>
+                                </section>
+                                <section>
+                                    <a href="https://rusfond.ru" target="_blank" class="image half_center"><img src="https://im.rusfond.ru/pics/landings/kazan/rusfond_logo.svg" alt="Благотворительное общество Русфонд"></a>
+                                </section>
+                                
+                            </div>
+                            <h2>Русфонд и Казанский (Приволжский) федеральный университет (КФУ)</h2>
+                            <p>приглашают всех желающих принять участие в первой всероссийской конференции, посвященной донорству костного мозга и организации работы регистров доноров костного мозга.
+Конференция проводится с использованием гранта Президента Российской Федерации на развитие гражданского общества, предоставленного Фондом президентских грантов.</p>
+                            
+                        </div>
+                    </section>
 
-				<!-- Seven -->
-					<section class="wrapper style1 align-center">
-						<div class="inner medium">
-							<h2>Get in touch</h2>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field half">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" value="" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" value="" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="6"></textarea>
-									</div>
-								</div>
-								<ul class="actions special">
-									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
-								</ul>
-							</form>
+                    <!-- Six -->
+                    <section class="wrapper style1 align-left">
+                        <div class="inner">
+                                <section>
+                                    <h2>В программе конференции:</h2>
+                                    <ul>
+                                        <li>обзорные лекции ведущих зарубежных и российских ученых в области HLA, организаторов регистров потенциальных доноров костного мозга, представителей трансплантационных клиник;</li>
+                                        <li>cеминар по привлечению потенциальных доноров и организации донорских акции;</li>
+                                        <li>мастер-класс по секвенированию методом NGS (количество мест ограниченно, просьба отправлять заявки на conference@rdkm.ru).</li>
+                                    </ul>
 
-						</div>
-					</section>
+                                    <h2>Основные темы конференции:</h2>
+                                    <ul>
+                                        <li>роль трансплантации гемопоэтических стволовых клеток от неродственных доноров в лечении онкогематологических больных;</li>
+                                        <li>плюсы и минусы взаимодействия с зарубежными и российскими регистрами доноров костного мозга;</li>
+                                        <li>организация работы регистра доноров костного мозга;</li>
+                                        <li>применение метода NGS для первичного НLА-типирования потенциальных доноров костного мозга;</li>
+                                        <li>стандарты Всемирной ассоциации доноров костного мозга (World Marrow Donor Association) для регистров;</li>
+                                        <li>правовые основы донорства костного мозга в России;</li>
+                                        <li>особенности рекрутинга потенциальных доноров костного мозга: российский и зарубежный опыт.</li>
+                                    </ul>
+                                </section>
+                            <div class="items style4 big_70 onscroll-fade-in">
+                                <section>
+                                    <p>Участие в конференции бесплатное. <strong>Вход свободный.</strong><br />
+                                    Окончание регистрации – 1 ноября 2018 года.<br />
+                                    Последний день приема заявок на доклады – 15 октября 2018 года.<br />
+                                    Для спикеров конференции предусмотрена оплата билетов и проживания. 
+                                    </p>
+                                </section>
+                            </div>                 
+                        </div>
+                    </section>
+
 
 				<!-- Footer -->
 					<footer class="wrapper style1 align-center">

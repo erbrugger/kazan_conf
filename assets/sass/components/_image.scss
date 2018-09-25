@@ -17,6 +17,10 @@
 			border-radius: _size(border-radius);
 		}
 
+		&.svg_300 {
+			width: 350px;
+		}
+
 		&.left,
 		&.right {
 			width: 40%;
